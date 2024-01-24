@@ -1,0 +1,62 @@
+tbl_users
+1. user_id        int 11 Pk AI 
+2. user_name      varchar 255
+3. user_email       varchar 255
+4. user_password     varchar 255
+5. user_contactNo
+6. user_address
+7. user_type         enum ("A","E","C") as defined C
+8. user_profileImage
+9. user_status          enum("A","B") as defined A
+10. user_createdDate    datetime
+11. user_updatedDate
+
+
+
+tbl_categories
+1. category_id
+2. category_name
+3. category_type            Enum("M","F")
+4. category_status
+5. category_createdDate
+6. category_updatedDate
+
+
+
+tbl_products
+1. product_id                    int 11 PK AI 
+2. product_categoryType         enum ("M","F") 
+3. product_categoryID           int 11
+4. product_name     varchar 255  
+5. product_price     int 11 
+6. product_discount   int 11 
+7. product_featuredImage   varchar255  
+8. product_description     text 
+9. product_small     enum ("A","NA") available/ not available
+10. product_medium   enum ("A","NA") available/ not available
+11. product_large    enum ("A","NA") available/ not available
+12. product_extraLarge   enum ("A","NA") available/ not available
+13. product_status         enum("A","B") as defined A 
+14. product_createdDate 
+15. product_updatedDate
+
+
+
+tbl_product_images
+1. product_image_id    int 11 PK
+2. product_image_productID   int 11
+3. product_image_path      varchar 255
+4. product_image_createdDate
+
+
+
+
+tbl_product_colors
+1. product_color_id    int 11 PK
+2. product_color_productID    int 11
+3. product_color     varchar 255
+4. product_color_createdDate 
+
+
+
+

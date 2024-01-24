@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&display=swap");
+:root {
+  --white: #fff;
+  --blue: #000943;
+  --red: #ec0029;
+  --orange: orange;
+  --green: green;
+  --black: #000;
+  --light-blue: #f0f7ff;
+  --dark-grey: rgb(184, 183, 183);
+  --grey: rgb(233 225 225);
+  --fira-font: "Fira Sans", sans-serif;
+  --dm-font: "DM Serif Display", serif;
+}
+body {
+  font-weight: 300;
+  color: var(--blue);
+  font-family: var(--fira-font);
+  background: #f6f9ff;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+/* General classes */
+.color-red {
+  color: var(--red);
+}
+.color-blue {
+  color: var(--blue);
+}
+.color-white {
+  color: var(--white);
+}
+.color-grey {
+  color: #acacac;
+}
+.bg-blue {
+  background-color: var(--blue);
+}
+.bg-light-blue {
+  background-color: var(--light-blue);
+}
+.bg-grey {
+  background-color: var(--grey);
+}
+.bg-red {
+  background-color: var(--red);
+}
+.bg-white {
+  background-color: var(--white);
+}
+.bg-orange {
+  background-color: var(--orange);
+}
+.bg-green {
+  background-color: var(--green);
+}
+.title-secondary {
+  font-size: clamp(2.375rem, 2vw + 0.1rem, 4.375rem);
+  line-height: 65px;
+  padding-top: 1rem;
+  position: relative;
+  font-family: var(--dm-font);
+}
+.title-secondary:before {
+  top: 0;
+  content: "";
+  height: 2px;
+  width: 115px;
+  background: #000;
+  position: absolute;
+}
+.btn {
+  border: 1px solid var(--blue);
+  border-radius: 0;
+  padding: 10px 20px;
+  color: var(--blue);
+  font-family: var(--dm-font);
+}
+.btn:hover {
+  background-color: var(--blue);
+  color: var(--white);
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+.card .card-img {
+  height: 350px;
+}
+.card .card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+/* header */
+header {
+  box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+  background-color: #fff;
+  padding-block: 15px;
+}
+header .header-inner {
+  padding-inline: 20px;
+}
+header .logo {
+  display: block;
+  width: 10%;
+}
+header .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+header .search-bar {
+  position: relative;
+}
+header .search-bar input {
+  padding: 5px 10px;
+  border: 1px solid var(--blue);
+}
+header .search-bar input:focus {
+  outline: none;
+}
+header .search-bar i {
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+header .notify-dropdown .notify-btn {
+  border: none;
+  font-size: 1.5rem;
+  background: none;
+  color: var(--blue);
+  position: relative;
+}
+header .notify-dropdown .notify-count-info {
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  background: var(--red);
+  color: var(--white);
+  font-size: 1rem;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+header .btn-group img {
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+header .btn-group button {
+  border: none;
+  background: none;
+  color: var(--blue);
+}
+/* sidebar */
+.sidebar {
+  position: fixed;
+  top: 72px;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  z-index: 996;
+  transition: all 0.3s;
+  padding: 20px;
+  overflow-y: auto;
+  /* scrollbar-width: thin;
+  scrollbar-color: #aab7cf transparent; */
+  box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
+  background-color: #fff;
+}
+.sidebar .sidebar-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.sidebar .sidebar-nav .nav-item a {
+  text-decoration: none;
+  /* text-transform: uppercase; */
+  color: var(--blue);
+  font-family: var(--dm-font);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+.sidebar .sidebar-nav .nav-item a.active {
+  background: #f6f9ff;
+  color: var(--red);
+}
+.sidebar .sidebar-nav .nav-item a:hover {
+  color: var(--red);
+}
+#main {
+  margin-left: 300px;
+  margin-top: 72px;
+  padding: 20px 30px;
+}
+/* login and signup page  */
+.login-section {
+  background: linear-gradient(to right, var(--blue) 50%, var(--white) 50%);
+}
+.login-section .login-box {
+  padding-top: 50px;
+}
+.login-section .login-vector {
+  height: 80vh;
+}
+.login-section .login-vector img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.login-section .login-form {
+  max-width: 500px;
+  margin: auto;
+}
+.login-section .login-form .form-group input {
+  border: 1px solid var(--blue);
+  border-radius: 0;
+  color: var(--blue);
+}
+.login-section .login-form .form-group label {
+  color: var(--blue);
+  margin-bottom: 5px;
+}
+.login-section .login-form .form-group input:focus {
+  outline: none;
+  box-shadow: none;
+}
+.login-section .login-form .sign-body button[type="submit"] {
+  background-color: var(--blue);
+  color: var(--white);
+  border: none;
+  width: 100%;
+  border-radius: 0;
+  padding: 10px;
+}
+.login-section .login-box .back-button {
+  cursor: pointer;
+}
+/* Manage Employee */
+.manage-employee table thead th , .manage-employee table tbody td{
+  padding: 0.75rem;
+  text-align:left;
+}
+.manage-employee button a , .manage-employee button{
+  border-radius: 7px;
+  border: none;
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 0.5rem;
+}
+#active {
+  color: var(--red);
+  text-shadow: #ec0029;
+  text-shadow: 0px 0px 7px #ff7070;
+}
+#in-active {
+  color: var(--green);
+  text-shadow: 0px 0px 7px #4da366;
+}
+@media (max-width: 991.98px) {
+  .login-section {
+    background: var(--blue);
+  }
+  .login-section .login-form {
+    margin-top: 100px;
+  }
+}
+
+table tr td {
+  vertical-align: middle;
+  text-wrap: nowrap;
+}
+td button {
+  margin: 5px;
+}
+td button i {
+  font-size: 20px;
+}
+.modal-header {
+  background: #0d6efd;
+  color: #fff;
+}
+.modal-body form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0;
+}
+.modal-body form .imgholder {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.imgholder .upload {
+  position: absolute;
+  bottom: 0;
+  left: 10;
+  width: 100%;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.upload i {
+  color: #fff;
+  font-size: 35px;
+}
+.imgholder:hover .upload {
+  display: flex;
+}
+.imgholder .upload input {
+  display: none;
+}
+.modal-body form .inputField {
+  flex-basis: 68%;
+  border-left: 5px groove blue;
+  padding-left: 20px;
+}
+form .inputField > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+form .inputField > div label {
+  font-size: 20px;
+  font-weight: 500;
+}
+#userForm form .inputField > div label::after {
+  content: "*";
+  color: red;
+}
+form .inputField > div input {
+  width: 75%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 2px solid blue;
+}
+.modal-footer .submit {
+  font-size: 18px;
+}
+#readData form .inputField > div input {
+  color: #000;
+  font-size: 18px;
+}

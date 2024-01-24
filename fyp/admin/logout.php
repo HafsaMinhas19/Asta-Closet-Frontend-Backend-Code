@@ -1,0 +1,10 @@
+<?php
+session_start();
+unset($_SESSION['adminID']);
+unset($_SESSION['adminName']);
+unset($_SESSION['adminEmail']);
+unset($_SESSION['adminImage']);
+unset($_SESSION['adminType']);
+header("location:login.php");
+exit();
+?>
